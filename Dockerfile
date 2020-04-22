@@ -5,11 +5,6 @@ FROM alpine:latest
 #install zsh
 RUN apk add zsh
 
-#run time ls
-CMD ["time", "ls"]
+#run time ls, time pwd, time echo hello world
+CMD ["sh", "-c", "time ls ; time pwd ; time echo Hello, world!"]
 
-# #run time pwd
-# CMD ["time", "pwd"]
-
-# #run time echo "testing time"
-# CMD ["time", "echo", "Hello, world!"]
